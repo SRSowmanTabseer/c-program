@@ -1,0 +1,85 @@
+#include <stdio.h>
+int main()
+{
+ int total,avg,choice,m1,m2,m3,m4,m5,rollno;
+ char name[30],grade;
+ int c;
+
+ printf("\n STUDENTS MARKS MANAGEMENT SYSTEM\n");
+ printf("\n1.ENTER STUDENT DETAILS:\n");
+ printf("\n2.CALCULATE RESULT:\n");
+ printf("\n3.SHOW RESULT:\n");
+ printf("\n4.EXIT:\n");
+ printf("ENTER YOUR CHOICE:");
+ scanf("%d",choice);
+ switch(choice)
+ {
+
+ case1:
+
+ printf("\nenter rollnumber:\n");
+ scanf("%d", &rollno);
+
+ printf("\nenter student name\n:");
+ scanf("%s", &name);
+
+ printf("\nenter subject mark 1:\n");
+ scanf("%d", &m1);
+
+ printf("\nenter subject mark 2:\n");
+ scanf("%d", &m2);
+
+ printf("\nenter subject mark 3:\n");
+ scanf("%d", &m3);
+
+ printf("\nenter subject mark 4:\n");
+ scanf("%d", &m4);
+
+ printf("\nenter subject mark 5:\n");
+ scanf("%d", &m5);
+ break;
+
+ case 2:
+ printf("\nCALCULATERESULT\n");
+
+ total=m1+m2+m3+m4+m5;
+ avg=total/5.0;
+
+ if(avg>=90)
+ grade='A';
+ else if (avg>=80)
+ grade='B';
+ else if (avg>=70)
+ grade='c';
+
+ else
+ grade = 'd';
+
+ break;
+
+ case 3:
+ printf("\NSTUDENTRESULT\n");
+ printf("roll");
+ printf("name");
+ printf("m1");
+ printf("m2");
+ printf("m3");
+ printf("m4");
+ printf("m5");
+ printf("total");
+ printf("avg");
+ printf("grade");
+
+ if (grade=='d')
+ printf("fail");
+ else
+ printf("pass");
+ break;
+
+ case 4:
+ printf("thank you");
+ break;
+ }
+ while( choice !=4) ;
+  return 0;
+}
