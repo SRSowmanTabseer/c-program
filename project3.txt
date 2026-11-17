@@ -1,0 +1,50 @@
+#include<stdio.h>
+struct student
+{
+  char name[50];
+  int rollno;
+  float mark;
+  char city[50];
+  char dream[50];
+};
+void read(struct student s[],int n)
+{
+  int i;
+  for(i=0;i<n;i++)
+  {
+  printf("\nEnter student %d details\n",i+1);
+  scanf("Name:");
+  printf("roll number:");
+  scanf("%d",&s[i].rollno);
+  printf("mark:");
+  scanf("%s",s[i].city);
+  printf("dream:");
+  scanf("%s",s[i].city);
+  }
+}
+void write(struct student s[],int n)
+{
+   int i;
+   for(i=0;i<n;i++)
+   printf("\nstudent %d details\n",i+1);
+   printf("name: %s\n",s[i].name);
+   printf("mark: %2f\n",s[i].mark);
+   printf("city: %s\n",s[i].city);
+   printf("fream: %s\n",s[i].dream);
+   }
+
+int main()
+{
+  struct student s[100];
+  int n;
+  printf("Enter number of students:");
+  scanf("%d",&n);
+  if(n<1 || n>100)
+  {
+   printf("Invalid number of students!\n");
+   return 1;
+  }
+  read(s,n);
+  write(s,n);
+  return 0;
+}
